@@ -6,7 +6,7 @@ The main goal of this project is to provide clear data points and success rates 
 
 # Resources
 
-* Dataset from LendingClub: [charity_data.csv]()
+* Dataset from LendingClub: [charity_data.csv](https://github.com/meliscelikay/Neural_Network_Charity_Analysis/blob/5b0f6a9450ff547033c4c0e7675cdf2eb6da8a24/Resources/charity_data.csv)
 * Software: Python 3.9.7, Anaconda Navigator 1.10.0, Conda 4.13.0 and Jupyter Notebooks 6.4.12
 
 # Results
@@ -34,8 +34,10 @@ The main goal of this project is to provide clear data points and success rates 
    - What variable(s) are neither targets nor features, and should be removed from the input data?
     
    `EIN` and `NAME` are non-beneficial ID columns and were dropped from the input data since they do not influence the outcome.
-   ![charity_data_head.png]()
-   ![charity_data_dropped.png]()
+   
+   ![charity_data_head.png](https://github.com/meliscelikay/Neural_Network_Charity_Analysis/blob/5b0f6a9450ff547033c4c0e7675cdf2eb6da8a24/Resources/charity_data_head.png)
+   
+   ![charity_data_dropped.png](https://github.com/meliscelikay/Neural_Network_Charity_Analysis/blob/5b0f6a9450ff547033c4c0e7675cdf2eb6da8a24/Resources/charity_data_dropped.png)
 
 
 ##  Compiling, Training, and Evaluating the Model
@@ -44,22 +46,28 @@ The main goal of this project is to provide clear data points and success rates 
     
    The input data has 43 features and 25,724 samples. The first attempt at a model design included 80 neurons for the first hidden layer. 30 layers was chosen for the second hidden layer. A unique neuron '1' used for the output layer. The activation function `ReLu` used for the hidden layers & `Sigmoid` used for the output layer as the unique neuron is a binary classification. For the compilation, the optimizer is `adam` and the loss function is `binary_crossentropy`. 
    
-   ![x_train_scaled.png]()
-   ![define_model.png]()
+   ![x_train_scaled.png](https://github.com/meliscelikay/Neural_Network_Charity_Analysis/blob/5b0f6a9450ff547033c4c0e7675cdf2eb6da8a24/Resources/x_train_scaled.png)
+   
+   ![define_model.png](https://github.com/meliscelikay/Neural_Network_Charity_Analysis/blob/5b0f6a9450ff547033c4c0e7675cdf2eb6da8a24/Resources/define_model.png)
     
    - Were you able to achieve the target model performance?
     
    The model accuracy: ~73% which is under the target model performance and could not help to predict the outcome of the charity donations.
     
-   ![AlphabetSoupCharity.png]()
+   ![AlphabetSoupCharity.png](https://github.com/meliscelikay/Neural_Network_Charity_Analysis/blob/5b0f6a9450ff547033c4c0e7675cdf2eb6da8a24/Resources/AlphabetSoupCharity.png)
     
    - What steps did you take to try and increase model performance?
     
    Applied bucketing to the feature `ASK_AMT` and organized the different values by intervals. The number of neurons on one of the hidden layers increased, a model with three hidden layers used. Also, a different activation function `Tanh` tried in order to increase model performance but the model accuracy remain as ~73% and the model's performance not improved.
    
-   ![neurons_added.png]()
-   ![layer_added.png]()
-   ![Tanh_function.png]()
+###### The number of neurons on one of the hidden layers increased   
+   ![neurons_added.png](https://github.com/meliscelikay/Neural_Network_Charity_Analysis/blob/5b0f6a9450ff547033c4c0e7675cdf2eb6da8a24/Resources/neurons_added.png)
+
+###### A model with three hidden layers used
+   ![layer_added.png](https://github.com/meliscelikay/Neural_Network_Charity_Analysis/blob/5b0f6a9450ff547033c4c0e7675cdf2eb6da8a24/Resources/layer_added.png)
+
+###### `Tanh` activation function used
+   ![Tanh_function.png](https://github.com/meliscelikay/Neural_Network_Charity_Analysis/blob/5b0f6a9450ff547033c4c0e7675cdf2eb6da8a24/Resources/Tanh_function.png))
 
 
 #  Summary
